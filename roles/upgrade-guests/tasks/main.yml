@@ -1,0 +1,11 @@
+--- 
+
+- include_tasks: upgrade-guest.yml
+  with_items: "{{ vcmp_guests }}"
+  when:
+    standby_host|bool == true
+  tags:
+    - upgrade-guests
+
+
+

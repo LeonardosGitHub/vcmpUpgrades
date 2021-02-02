@@ -1,0 +1,8 @@
+- name: License bigip using the license module
+  bigip_device_license:
+    license_key: "{{ reg_key }}"
+    accept_eula: yes
+    provider: "{{ provider }}"
+  delegate_to: localhost
+
+
